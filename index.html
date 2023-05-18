@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <form action="/login" method="post">
+        <div class="container">
+            <label>Username</label>
+            <input type="text" name="username" required>
+            <label>Password</label>
+            <input type="password" name="password" required>
+            <button type="submit">Submit</button>
+        </div>
+        <script>
+            if(document.location.hash === '#unauthorized') {
+                document.write('<div class="unauthorized">Invalid Username or Password</div>');
+            } else if(document.location.hash === '#error') {
+                document.write('<div class="error">An error has occured</div>');
+            }
+        </script>         
+    </form>
+</body>
+</html>
